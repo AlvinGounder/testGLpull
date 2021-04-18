@@ -1,3 +1,7 @@
+variables:
+    CI_DEBUG_TRACE: "true"
+    TEST_VAR: 4
+    
 always-run:
   script: echo 'this should always run'
 
