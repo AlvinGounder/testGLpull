@@ -3,14 +3,15 @@ variables:
     TEST_VAR: 7
     
 always-run:
-  script: echo 'this should always run'
+  script: echo 'this should always run. E_IID: ' && echo $CI_EXTERNAL_PULL_REQUEST_IID
+  
 
 on-pull-requests:
-  script: echo 'this should run on pull requests'
+  script: echo 'this should run on pull requests. E_IID: ' && echo $CI_EXTERNAL_PULL_REQUEST_IID'
   only:
     - external_pull_requests
 
 except-pull-requests:
-  script: echo 'this should on everything EXCEPT pull requests'
+  script: echo 'this should on everything EXCEPT pull requests. E_IID: ' && echo $CI_EXTERNAL_PULL_REQUEST_IID
   except:
     - external_pull_requests
