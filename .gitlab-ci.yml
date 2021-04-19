@@ -1,5 +1,5 @@
 variables:
-    CI_DEBUG_TRACE: "false"
+    CI_DEBUG_TRACE: "true"
     
 on-pull-requests:
   script: 
