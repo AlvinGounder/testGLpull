@@ -16,3 +16,11 @@ except-pull-requests:
     - echo $CI_PIPELINE_SOURCE
   except:
     - external_pull_requests
+    
+Only-some-refs:
+ script:
+    - echo 'This will run for refs = (tags or branches)'
+ only:
+    refs:
+    - tags
+    - branches
